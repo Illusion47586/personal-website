@@ -1,0 +1,356 @@
+* {
+  font-family: "poppins", sans-serif;
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 70px;
+  line-height: 90px;
+}
+
+.special {
+  background: linear-gradient(to bottom right, #e96443, #904e95);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contents {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  flex: 1;
+  height: 100%;
+  position: relative;
+  max-width: 500px;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.welcome-text {
+  height: calc(15vh - 50px);
+}
+
+.intro {
+  padding: 50px;
+  height: calc(85vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.intro .explore-text {
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+button {
+  min-width: 212px;
+  min-height: 69px;
+  font-size: 24px;
+  border-radius: 10px;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-button {
+  color: white;
+  border: white solid;
+  transition: all 2s ease-in-out;
+}
+
+.option-button:hover {
+  border: none;
+  font-weight: 500;
+  color: white;
+  background-image: linear-gradient(to bottom right, #e96443, #904e95);
+}
+
+.button--active {
+  font-weight: 500;
+  background-color: black;
+  color: white;
+}
+
+.button--passive {
+  color: black;
+  background-color: transparent;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-bottom: 100px;
+}
+
+.profile-picture {
+  max-height: 270px;
+  padding: 20px;
+  border-radius: inherit;
+  box-shadow: 0 0 30px black;
+  border-style: dashed;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-color: white;
+  border-top-color: #e96443;
+  border-bottom-color: #904e95;
+  border-width: 5px;
+  background-color: black;
+  margin-right: 70px;
+  animation: scalingAnimation cubic-bezier(0.87, 0.02, 0.49, 1.6) 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scalingAnimation {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 250px;
+  }
+}
+
+.code-box {
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 450px;
+  overflow: hidden;
+  box-shadow: 0 0 30px black;
+}
+
+.code-box-top {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.code-box-heading {
+  font-weight: 600;
+  font-size: 23px;
+  display: inline;
+}
+
+.code-box-window-button--1 {
+  color: #ffe056;
+}
+
+.code-box-window-button--2 {
+  color: #92ff60;
+}
+
+.code-box-window-button--3 {
+  color: #ff2c4f;
+}
+
+.code-box-content {
+  font-family: "Source Code Pro", monospace;
+  line-height: 23px;
+  max-width: 450px;
+  max-height: 400px;
+  min-height: 200px;
+  overflow-y: scroll;
+}
+
+.code-box-content .green {
+  color: #a8ff56;
+  font: inherit;
+}
+
+.code-box-content::-webkit-scrollbar {
+  width: 1em;
+}
+
+.code-box-content::-webkit-scrollbar-track-piece {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.code-box-content::-webkit-scrollbar-track {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.code-box-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(#e96443, #904e95);
+  border-radius: 100px;
+}
+
+.code-box-content::-webkit-scrollbar-corner {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.code-box-content::selection {
+  background-color: white;
+  color: black;
+  caret-color: #a8ff56;
+}
+
+.social-icons {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 20px;
+  animation: SlideInFromRight cubic-bezier(0.87, 0.02, 0.49, 1.6) 1s;
+}
+
+.social-icons ul {
+  list-style: none;
+}
+
+.social-icons ul li {
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@keyframes SlideInFromRight {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.side-menu {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: SlideInFromLeft cubic-bezier(0.87, 0.02, 0.49, 1.6) 1s;
+}
+
+.side-menu ul {
+  list-style: none;
+}
+
+.side-menu ul li.menu-item a {
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  background-color: black;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  font-size: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu ul li.menu-item a i {
+  font-size: 30px;
+  padding-bottom: 5px;
+  background: linear-gradient(to bottom right, #e96443, #904e95);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.side-menu ul li.menu-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.side-menu ul li.menu-item:active a, .side-menu ul li.menu-item:hover a {
+  background: linear-gradient(to bottom right, #e96443, #904e95);
+  box-shadow: none;
+  color: white;
+  text-decoration: none;
+}
+
+.side-menu ul li.menu-item:active a i, .side-menu ul li.menu-item:hover a i {
+  background: none;
+  background-color: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes SlideInFromLeft {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #171717;
+  color: white;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: black;
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-track-piece {
+  background-color: black;
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(#e96443, #904e95);
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-corner {
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background-color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

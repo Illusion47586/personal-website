@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EAOP,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,aAAa,EAAE,IAAI;CA6BpB;;AAzBE,AAAD,gBAAS,CAAC;EACR,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,aAAa,EAAE,OAAO;EACtB,UAAU,EAAE,cAAc;EAC1B,YAAY,EAAE,MAAM;EACpB,mBAAmB,EAAE,KAAK;EAC1B,gBAAgB,EAAE,KAAK;EACvB,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,GAAG;CAClB",
+    "sources": [
+        "../scss/components/profile-picture.scss"
+    ],
+    "names": [],
+    "file": "profile-picture.css"
+}

@@ -1,0 +1,36 @@
+button {
+  min-width: 212px;
+  min-height: 69px;
+  font-size: 24px;
+  border-radius: 10px;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-button {
+  color: white;
+  border: white solid;
+  transition: all 2s ease-in-out;
+
+  &:hover {
+    border: none;
+    font-weight: 500;
+    color: white;
+    background-image: $main-gradient;
+  }
+}
+
+.button--active {
+  font-weight: 500;
+  background-color: black;
+  color: white;
+}
+
+.button--passive {
+  color: black;
+  background-color: transparent;
+}

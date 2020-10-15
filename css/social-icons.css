@@ -1,0 +1,36 @@
+.social-icons {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 20px;
+  animation: SlideInFromRight cubic-bezier(0.87, 0.02, 0.49, 1.6) 1s;
+}
+
+.social-icons ul {
+  list-style: none;
+}
+
+.social-icons ul li {
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@keyframes SlideInFromRight {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 0;
+  }
+}
+/*# sourceMappingURL=social-icons.css.map */

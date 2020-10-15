@@ -1,0 +1,36 @@
+.code-box {
+  background-color: black;
+  padding: 20px;
+  font-family: "Source Code Pro", monospace;
+  border-radius: 20px;
+  line-height: 23px;
+  max-width: 450px;
+  max-height: 400px;
+  box-shadow: 0 0 30px black;
+}
+
+.code-box-top {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.code-box-heading {
+  font-weight: 600;
+  font-size: 23px;
+  display: inline;
+}
+
+.code-box-window-button--1 {
+  color: #ffe056;
+}
+
+.code-box-window-button--2 {
+  color: #92ff60;
+}
+
+.code-box-window-button--3 {
+  color: #ff2c4f;
+}
+/*# sourceMappingURL=code-box.css.map */

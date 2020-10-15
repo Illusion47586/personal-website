@@ -1,0 +1,19 @@
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.profile-picture {
+  height: 250px;
+  padding: 20px;
+  border-radius: inherit;
+  box-shadow: 0 0 30px black;
+  border-style: dashed;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-color: white;
+  border-width: 5px;
+}
+/*# sourceMappingURL=profile-picture.css.map */

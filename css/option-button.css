@@ -1,0 +1,36 @@
+button {
+  min-width: 212px;
+  min-height: 69px;
+  font-size: 24px;
+  border-radius: 10px;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-button {
+  color: white;
+  border: white solid;
+  transition: all 0.3s;
+}
+
+.option-button:hover {
+  font-weight: 500;
+  color: white;
+  background-image: linear-gradient(to bottom right, #e66465, #9198e5);
+}
+
+.button--active {
+  font-weight: 500;
+  background-color: black;
+  color: white;
+}
+
+.button--passive {
+  color: black;
+  background-color: transparent;
+}
+/*# sourceMappingURL=option-button.css.map */

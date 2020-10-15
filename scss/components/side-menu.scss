@@ -1,0 +1,74 @@
+.side-menu {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  animation: SlideInFromLeft $curve 1s;
+
+  ul {
+    list-style: none;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-content: center;
+
+    li.menu-item {
+      a {
+        padding: 20px;
+        border-radius: 0 10px 10px 0;
+        background-color: black;
+        color: white;
+
+        i {
+          font-size: 30px;
+          padding-bottom: 5px;
+          background: $main-gradient;
+
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        font-family: "Source Code Pro", monospace;
+        font-size: 23px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      &:active,
+      &:hover {
+        a {
+          background: $main-gradient;
+          box-shadow: none;
+          color: white;
+          text-decoration: none;
+          i {
+            background: none;
+            background-color: white;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes SlideInFromLeft {
+  0% {
+    left: -10%;
+  }
+
+  100% {
+    left: 0;
+  }
+}

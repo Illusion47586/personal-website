@@ -1,0 +1,79 @@
+.code-box {
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 450px;
+  overflow: hidden;
+
+  box-shadow: 0 0 30px black;
+
+  &-top {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-heading {
+    font-weight: 600;
+    font-size: 23px;
+    display: inline;
+  }
+
+  &-window-button {
+    &--1 {
+      color: rgb(255, 224, 86);
+    }
+
+    &--2 {
+      color: rgb(146, 255, 96);
+    }
+
+    &--3 {
+      color: rgb(255, 44, 79);
+    }
+  }
+
+  &-content {
+    font-family: "Source Code Pro", monospace;
+    line-height: 23px;
+    max-width: 450px;
+    max-height: 400px;
+    min-height: 200px;
+    overflow-y: scroll;
+
+    .green {
+      color: rgb(168, 255, 86);
+      font: inherit;
+    }
+
+    &::-webkit-scrollbar {
+      width: 1em;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      visibility: hidden;
+      opacity: 0;
+    }
+    &::-webkit-scrollbar-track {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient($first-color, $second-color);
+      border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &::selection {
+      background-color: white;
+      color: black;
+      caret-color: rgb(168, 255, 86);
+    }
+  }
+}

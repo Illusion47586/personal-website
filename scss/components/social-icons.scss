@@ -1,0 +1,39 @@
+.social-icons {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 20px;
+
+  animation: SlideInFromRight $curve 1s;
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: 10px;
+      font-size: 30px;
+      border-radius: 10px;
+      background-color: black;
+      //   height: 40px;
+      //   width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@keyframes SlideInFromRight {
+  0% {
+    right: -10%;
+  }
+
+  100% {
+    right: 0;
+  }
+}

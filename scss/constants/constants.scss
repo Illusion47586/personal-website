@@ -1,0 +1,15 @@
+$primary-color: #14213d;
+$secondary-color: #8900f2;
+$height: 60px;
+$width: 650px;
+$margin-button: 58px;
+
+$first-color: #e96443;
+$second-color: #904e95;
+
+$main-gradient: linear-gradient(to bottom right, $first-color, $second-color);
+
+$curve: cubic-bezier(0.87, 0.02, 0.49, 1.6);
+
+$item-shadow: 0 0 15px black;
+$item-shadow--active: 0 0 15px $second-color;
