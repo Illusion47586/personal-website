@@ -1,4 +1,4 @@
-qna = [{ question: "help", answer: "list of commands" }];
+const qna = [{ question: "help", answer: "list of commands" }];
 
 const terminal = document.querySelector(".code-box-content p");
 

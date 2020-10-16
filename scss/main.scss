@@ -2,15 +2,10 @@
 
 @import "typography/font";
 
-@import "layout/contents";
-@import "layout/options-list";
-@import "layout/intro";
-
-@import "components/option-button";
-@import "components/profile-picture";
 @import "components/code-box";
 @import "components/social-icons";
-@import "components/side-menu";
+
+@import "utilities/remove-blue-highlight";
 
 body {
   box-sizing: border-box;
