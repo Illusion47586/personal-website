@@ -3,9 +3,16 @@
 }
 
 h1 {
-  font-size: 70px;
-  line-height: 70px;
-  line-height: 90px;
+  font-size: 50px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 910px) {
+  h1 {
+    font-size: 25px;
+    padding-top: 20px;
+  }
 }
 
 .special {
@@ -36,28 +43,12 @@ h1 {
   align-items: center;
 }
 
-.welcome-text {
-  height: calc(15vh - 50px);
-}
-
-.intro {
-  padding: 50px;
-  height: calc(85vh - 100px);
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  justify-content: space-between;
-  margin-top: 80px;
-}
-
 .intro .explore-text {
   font-weight: 500;
   margin-bottom: 80px;
 }
 
 button {
-  min-width: 212px;
-  min-height: 69px;
   font-size: 24px;
   border-radius: 10px;
   font-weight: 400;
@@ -97,7 +88,6 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  margin-bottom: 100px;
 }
 
 .profile-picture {
@@ -129,12 +119,17 @@ button {
 }
 
 .code-box {
+  justify-self: stretch;
+  flex-grow: 1;
   background-color: black;
   padding: 20px;
   border-radius: 20px;
-  max-width: 450px;
+  width: 75vw;
   overflow: hidden;
-  box-shadow: 0 0 30px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.05), 10px 10px 30px rgba(0, 0, 0, 0.808);
 }
 
 .code-box-top {
@@ -163,17 +158,51 @@ button {
 }
 
 .code-box-content {
-  font-family: "Source Code Pro", monospace;
-  line-height: 23px;
-  max-width: 450px;
-  max-height: 400px;
-  min-height: 200px;
+  width: 75vw;
+  height: auto;
+  height: calc(65vh - 80px - 16px);
+  max-height: 80vh;
   overflow-y: scroll;
+  animation-name: expandText;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.87, 0.02, 0.49, 1.6);
 }
 
-.code-box-content .green {
+.code-box-content p {
+  font-family: "Source Code Pro", monospace;
+  line-height: 23px;
+}
+
+.code-box-content p .green {
   color: #a8ff56;
   font: inherit;
+}
+
+.code-box-content p .yellow {
+  color: #fffc56;
+  font: inherit;
+}
+
+.code-box-content p a {
+  font: inherit;
+  font-weight: 500;
+  color: white;
+}
+
+.code-box-content p a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  color: white;
+}
+
+.code-box-content p a:active, .code-box-content p a:visited {
+  color: white;
+}
+
+.code-box-content p i {
+  font: inherit;
+  color: white;
 }
 
 .code-box-content::-webkit-scrollbar {
@@ -206,39 +235,146 @@ button {
   caret-color: #a8ff56;
 }
 
-.social-icons {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.code-box #command-text {
+  padding-top: 20px;
+  display: flex;
+  align-items: stretch;
+  width: inherit;
+}
+
+.code-box #command-text label {
+  font-family: "Source Code Pro", monospace;
+  line-height: 23px;
   margin-right: 20px;
-  animation: SlideInFromRight cubic-bezier(0.87, 0.02, 0.49, 1.6) 1s;
 }
 
-.social-icons ul {
-  list-style: none;
+.code-box #command-text input[type="text"] {
+  flex-grow: 1;
+  background-color: red;
+  color: white;
+  border: none;
+  margin-right: 20px;
+  padding: 0;
+  font-family: "Source Code Pro", monospace;
+  line-height: 23px;
 }
 
-.social-icons ul li {
+.code-box #command-text input[type="text"]:enabled, .code-box #command-text input[type="text"]:active, .code-box #command-text input[type="text"]:placeholder-shown {
+  font-family: "Source Code Pro", monospace;
+  line-height: 23px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.code-box #command-text button {
+  padding: 0;
+  border: none;
+}
+
+.code-box #command-text button:hover, .code-box #command-text button:active {
+  border: none;
+}
+
+.code-box #command-text button i {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+@keyframes expandText {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    height: calc(70vh - 80px - 16px);
+    overflow-y: scroll;
+  }
+}
+
+@keyframes expandWindow {
+  0% {
+    height: auto;
+  }
+  100% {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 910px) {
+  .code-box {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .code-box-top {
+    padding-bottom: 15px;
+  }
+  .code-box-heading {
+    font-weight: 500;
+    font-size: 20px;
+    display: inline;
+  }
+  .code-box-content {
+    height: calc(67vh - 80px - 16px);
+    max-height: 80vh;
+  }
+  .code-box-content p {
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .code-box-content::-webkit-scrollbar {
+    width: 0.6em;
+  }
+  .code-box #command-text {
+    padding-top: 15px;
+  }
+  .code-box #command-text label {
+    font-family: "Source Code Pro", monospace;
+    font-size: 14px;
+    flex-shrink: 1;
+  }
+  .code-box #command-text input[type="text"] {
+    margin-right: 15px;
+    font-size: 14px;
+  }
+  .code-box #command-text input[type="text"]:enabled, .code-box #command-text input[type="text"]:active, .code-box #command-text input[type="text"]:placeholder-shown {
+    font-size: 14px;
+  }
+}
+
+.social-icons {
+  margin: 20px;
+  animation: opacity cubic-bezier(0.87, 0.02, 0.49, 1.6) 0.7s;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(7, auto);
+}
+
+.social-icons-items {
   padding: 10px;
   font-size: 30px;
   border-radius: 10px;
   background-color: black;
   display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.social-icons ul li:not(:last-child) {
-  margin-bottom: 10px;
+@media (max-width: 910px) {
+  .social-icons {
+    grid-template-columns: repeat(4, auto);
+  }
 }
 
-@keyframes SlideInFromRight {
+@keyframes opacity {
   0% {
-    right: -10%;
+    opacity: 0;
   }
   100% {
-    right: 0;
+    opacity: 1;
   }
 }
 
@@ -306,12 +442,15 @@ button {
 
 body {
   box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
-  padding: 50px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #171717;
+  justify-content: space-around;
   color: white;
   overflow-x: hidden;
   background-repeat: no-repeat;
@@ -351,6 +490,7 @@ a {
 
 *::selection {
   background-color: white;
+  color: black;
   cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
