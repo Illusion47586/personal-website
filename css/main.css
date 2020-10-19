@@ -506,11 +506,13 @@ a {
   html::-webkit-scrollbar-track {
     visibility: hidden;
     display: none;
+    background-color: transparent;
   }
   body::-webkit-scrollbar-track-piece,
   html::-webkit-scrollbar-track-piece {
     visibility: hidden;
     display: none;
+    background-color: transparent;
   }
 }
 /*# sourceMappingURL=main.css.map */

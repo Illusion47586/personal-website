@@ -75,11 +75,13 @@ a {
     &::-webkit-scrollbar-track {
       visibility: hidden;
       display: none;
+      background-color: transparent;
     }
 
     &::-webkit-scrollbar-track-piece {
       visibility: hidden;
       display: none;
+      background-color: transparent;
     }
   }
 }
