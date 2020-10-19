@@ -70,6 +70,7 @@ a {
     &::-webkit-scrollbar {
       visibility: hidden;
       display: none;
+      width: 0;
     }
 
     &::-webkit-scrollbar-track {

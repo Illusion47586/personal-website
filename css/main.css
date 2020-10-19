@@ -501,6 +501,7 @@ a {
   html::-webkit-scrollbar {
     visibility: hidden;
     display: none;
+    width: 0;
   }
   body::-webkit-scrollbar-track,
   html::-webkit-scrollbar-track {
