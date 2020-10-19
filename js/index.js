@@ -11,7 +11,7 @@ function a(text, link) {
 
 function previewText(text, pathToImage) {
   return (
-    '<span class = "hoverable green" data-image = "' +
+    '<span class = "hoverable green noSelect" data-image = "' +
     pathToImage +
     '" onmouseover="hoverData(this)" onmousedown="clickAction(this)" onmouseout="removeData(this)">' +
     text +
