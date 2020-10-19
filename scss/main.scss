@@ -61,3 +61,14 @@ a {
     cursor: pointer;
   }
 }
+
+@media (max-width: 910px) {
+  body,
+  html {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0.7em;
+    }
+  }
+}

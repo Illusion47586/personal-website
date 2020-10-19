@@ -323,7 +323,6 @@ h1 {
 @media (max-width: 910px) {
   .social-icons {
     grid-template-columns: repeat(4, auto);
-    box-shadow: 0 5px 10px black;
   }
 }
 
@@ -491,5 +490,16 @@ a {
   background-color: white;
   color: black;
   cursor: pointer;
+}
+
+@media (max-width: 910px) {
+  body,
+  html {
+    overflow-y: scroll;
+  }
+  body::-webkit-scrollbar,
+  html::-webkit-scrollbar {
+    width: 0.7em;
+  }
 }
 /*# sourceMappingURL=main.css.map */
