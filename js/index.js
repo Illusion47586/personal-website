@@ -5,7 +5,7 @@ function a(text, link) {
     link +
     '">' +
     text +
-    '<i class="bx bx-link-external"></i> </a>'
+    '<i class="bx bx-link-external"></i></a>'
   );
 }
 
@@ -15,7 +15,7 @@ function previewText(text, pathToImage) {
     pathToImage +
     '" onmouseover="hoverData(this)" onmousedown="clickAction(this)" onmouseout="removeData(this)">' +
     text +
-    "</span> "
+    "</span>"
   );
 }
 
@@ -24,7 +24,7 @@ function yellow(text) {
 }
 
 function green(text) {
-  return '<span class = "green">' + text + " </span>";
+  return '<span class = "green">' + text + "</span>";
 }
 
 const br = "<br/>";
