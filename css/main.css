@@ -4,8 +4,6 @@
 
 h1 {
   font-size: 50px;
-  padding: 10px;
-  padding-bottom: 20px;
 }
 
 @media (max-width: 910px) {
@@ -84,6 +82,29 @@ h1 {
 .code-box-content p .yellow {
   color: #fffc56;
   font: inherit;
+}
+
+.code-box-content p .hoverable {
+  position: relative;
+}
+
+.code-box-content p .hoverable .hoverData {
+  position: absolute;
+  top: -100%;
+  left: 110%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  background: url("../assets/ld/ld.gif"), linear-gradient(to bottom right, #e96443, #904e95);
+  background-position: center;
+  background-size: contain;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px black;
+  animation-name: expandHoverData;
+  animation-iteration-count: 1;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.87, 0.02, 0.49, 1.6);
 }
 
 .code-box-content p a {
@@ -168,6 +189,7 @@ h1 {
   border: none;
   color: white;
   outline: none;
+  background: transparent;
 }
 
 .code-box #command-text button {
@@ -197,6 +219,30 @@ h1 {
   100% {
     height: calc(70vh - 80px - 16px);
     overflow-y: scroll;
+  }
+}
+
+@keyframes expandHoverData {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@keyframes collapseHoverData {
+  0% {
+    height: 200px;
+    width: 200px;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
 }
 
@@ -251,7 +297,7 @@ h1 {
 }
 
 .social-icons {
-  margin: 20px;
+  margin: 10px;
   animation: opacity cubic-bezier(0.87, 0.02, 0.49, 1.6) 0.7s;
   display: grid;
   grid-gap: 20px;
@@ -267,11 +313,17 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s;
+}
+
+.social-icons-items:hover {
+  transform: translateY(-5px);
 }
 
 @media (max-width: 910px) {
   .social-icons {
     grid-template-columns: repeat(4, auto);
+    box-shadow: 0 5px 10px black;
   }
 }
 
@@ -284,12 +336,104 @@ h1 {
   }
 }
 
+.loader {
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  position: absolute;
+  background-color: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #e96443, #904e95);
+  animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 .noSelect {
   -webkit-touch-callout: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 
+html,
 body {
   box-sizing: border-box;
   height: 100vh;
@@ -302,29 +446,34 @@ body {
   background-color: #171717;
   justify-content: space-around;
   color: white;
-  overflow-x: hidden;
+  overflow: hidden;
   background-repeat: no-repeat;
 }
 
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   width: 1em;
 }
 
+html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
   background-color: black;
   border-radius: 100px;
 }
 
+html::-webkit-scrollbar-track-piece,
 body::-webkit-scrollbar-track-piece {
   background-color: black;
   border-radius: 100px;
 }
 
+html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(#e96443, #904e95);
   border-radius: 100px;
 }
 
+html::-webkit-scrollbar-corner,
 body::-webkit-scrollbar-corner {
   visibility: hidden;
 }

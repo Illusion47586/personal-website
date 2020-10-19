@@ -5,6 +5,6 @@ if (x.matches) {
   label.setAttribute("for", "command");
   label.setAttribute("id", "command-label");
   label.innerText = "Dhruv\\website> ";
-  console.log("created");
+  // console.log("created");
   terminalWindow.appendChild(label);
 }

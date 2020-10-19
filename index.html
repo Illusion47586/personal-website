@@ -17,7 +17,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
-  <body>
+  <body onload="loaded()">
+    <div class="loader">
+      <div class="lds-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
     <h1 class="welcome-text">
       Welcome to my <span class="special">website</span>!
     </h1>
@@ -32,22 +46,35 @@
         </div>
       </div>
       <div class="code-box-content">
+        <script src="js/hoverData.js"></script>
         <p>
-          Hello👋🏼, <br />I am <span class="green">Dhruv Tiwari</span>, currently
-          a second year student👨🏼‍🎓 at NSUT(formerly NSIT), Delhi, India. I am
-          doing B.Tech in Information Technology👨🏽‍💻. <br /><br />In brief:
-          <br />Designer || Developer || Student. <br />Have a look at projects!
-          You may find something interesting there. <br /><br /># Type
+          Hello👋🏼, <br />I am
+          <span
+            class="green hoverable"
+            data-image="http://unsplash.it/1080/1080"
+            onmouseover="hoverData(this)"
+            onmousedown="clickAction(this)"
+            onmouseout="removeData(this)"
+            >Dhruv Tiwari</span
+          >, currently a second year student👨🏼‍🎓 at NSUT(formerly NSIT), Delhi,
+          India. I am doing B.Tech in Information Technology👨🏽‍💻. <br /><br />In
+          brief: <br />Designer || Developer || Student. <br />Have a look at
+          projects! You may find something interesting there. <br /><br /># Type
           <span class="yellow">help</span> in this terminal for getting all the
           commands.
-          <a href="" class="noselect"
-            >here is my resume<i class="bx bx-link-external"></i
-          ></a>
         </p>
       </div>
       <form action="" method="get" id="command-text">
         <script src="js/mediaQ.js"></script>
-        <input type="text" name="command" id="command" required autofocus />
+        <input
+          type="text"
+          name="command"
+          id="command"
+          required
+          autofocus
+          autocomplete="off"
+          placeholder="type here"
+        />
         <button type="submit" onclick="" id="submit" class="noselect">
           <i class="bx bxs-send"></i>
         </button>
@@ -57,13 +84,15 @@
     </div>
 
     <div class="social-icons">
-      <a class="social-icons-items bx bxl-linkedin"></a>
-      <a class="social-icons-items bx bxl-github"></a>
-      <a class="social-icons-items bx bxl-behance"></a>
-      <a class="social-icons-items bx bxl-dribbble"></a>
-      <a class="social-icons-items bx bx-mail-send"></a>
-      <a class="social-icons-items bx bxl-instagram"></a>
-      <a class="social-icons-items bx bxl-play-store"></a>
+      <a class="noSelect social-icons-items bx bxl-linkedin"></a>
+      <a class="noSelect social-icons-items bx bxl-github"></a>
+      <a class="noSelect social-icons-items bx bxl-behance"></a>
+      <a class="noSelect social-icons-items bx bxl-dribbble"></a>
+      <a class="noSelect social-icons-items bx bx-mail-send"></a>
+      <a class="noSelect social-icons-items bx bxl-instagram"></a>
+      <a class="noSelect social-icons-items bx bxl-play-store"></a>
     </div>
+
+    <script src="js/ending.js"></script>
   </body>
 </html>

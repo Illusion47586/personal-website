@@ -4,9 +4,11 @@
 
 @import "components/code-box";
 @import "components/social-icons";
+@import "components/loader";
 
 @import "utilities/remove-blue-highlight";
 
+html,
 body {
   box-sizing: border-box;
   height: 100vh;
@@ -19,7 +21,7 @@ body {
   background-color: #171717;
   justify-content: space-around;
   color: white;
-  overflow-x: hidden;
+  overflow: hidden;
   background-repeat: no-repeat;
 
   &::-webkit-scrollbar {
