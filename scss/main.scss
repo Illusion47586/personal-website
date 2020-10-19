@@ -71,5 +71,15 @@ a {
       visibility: hidden;
       display: none;
     }
+
+    &::-webkit-scrollbar-track {
+      visibility: hidden;
+      display: none;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      visibility: hidden;
+      display: none;
+    }
   }
 }

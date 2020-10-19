@@ -502,5 +502,15 @@ a {
     visibility: hidden;
     display: none;
   }
+  body::-webkit-scrollbar-track,
+  html::-webkit-scrollbar-track {
+    visibility: hidden;
+    display: none;
+  }
+  body::-webkit-scrollbar-track-piece,
+  html::-webkit-scrollbar-track-piece {
+    visibility: hidden;
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
