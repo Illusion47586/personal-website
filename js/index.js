@@ -104,7 +104,7 @@ commandBox.addEventListener("submit", function (e) {
   let reply = "<br/><br/>Dhruv\\website> " + value + "<br/>";
   let found = false;
   for (let i = 0; i < qna.length; i++) {
-    if (qna[i].question == value) {
+    if (qna[i].question == value.toLowerCase()) {
       reply = reply + qna[i].answer;
       found = true;
       break;
