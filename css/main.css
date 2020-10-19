@@ -499,7 +499,8 @@ a {
   }
   body::-webkit-scrollbar,
   html::-webkit-scrollbar {
-    width: 0.7em;
+    visibility: hidden;
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

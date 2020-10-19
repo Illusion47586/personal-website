@@ -68,7 +68,8 @@ a {
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
-      width: 0.7em;
+      visibility: hidden;
+      display: none;
     }
   }
 }
