@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Projects</title>
+  </head>
+  <body onload="loaded()">
+    <div class="loader">
+      <div class="lds-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p class="lds-text">welcome to probably the most exciting part!</p>
+    </div>
+
+    <div class="menu">
+      <button
+        class="menu-item menu-item--left"
+        data-active="false"
+        onclick="moveLeft()"
+      >
+        <i class="bx bxs-left-arrow-circle bx-md"></i>
+      </button>
+      <button
+        class="menu-item menu-item--right"
+        data-active="true"
+        onclick="moveRight()"
+      >
+        <i class="bx bxs-right-arrow-circle bx-md"></i>
+      </button>
+    </div>
+
+    <button class="menu-item menu-item--back" onclick="moveRight()">
+      <i class="bx bxs-window-alt"></i>go to terminal
+    </button>
+
+    <script src="js/projects/menu.js"></script>
+
+    <div class="projects" id="bookworm">
+      <div class="projects-visual">
+        <button class="projects-visual--find-here">
+          <i class="bx bxl-play-store"></i>Find it here
+        </button>
+      </div>
+      <div class="projects-text">
+        <h2 class="projects-text--heading">1. BookMark</h2>
+        <p class="projects-text--content">
+          <span class="projects-text--highlight">BookMark</span> is a simple app
+          that I made for learning
+          <span class="projects-text--highlight">flutter</span>, a framework for
+          cross platform app development. It is a very simple app, but
+          potentially solves a very simple problem, the problem of facing
+          trouble inculcating a daily reading habit, and well, sometimes
+          forgetting where you left last time reading. <br /><br />
+        </p>
+        <h3 class="projects-text--sub_heading">The Process:</h3>
+        <p class="projects-text--content">
+          1. <span class="projects-text--highlight">Designing: </span> I
+          designed the app first, a proper flowchart of what I wanted, then the
+          positioning of different elements, and finally the UI colors and font
+          selection. <br /><br />
+          2. <span class="projects-text--highlight">Coding: </span> Now that I
+          knew what I was looking forward as an end product, the only problem
+          was that I was really new to flutter, I didn't know how some things
+          are done, like creating a database, which databse to use, persisting
+          data, fetching data from the internet etc. This step, as expected took
+          the longest trials. <br /><br />
+          3.
+          <span class="projects-text--highlight">Cleaning the code: </span> Now
+          since the code was ready, and app was working, I tried to keep the
+          code DRY as much as I could. <br /><br />
+          4. <span class="projects-text--highlight">Testing: </span> I shared
+          the app among my friends, who then tried the app, and told me about
+          some bugs and required features. <br /><br />
+          5. <span class="projects-text--highlight">Releasing: </span> Added the
+          much-demanded dark mode to the app, and finally published it to the
+          play store.
+          <br />
+        </p>
+      </div>
+    </div>
+
+    <script src="js/ending.js"></script>
+  </body>
+</html>
