@@ -35,3 +35,11 @@ function moveLeft() {
     }
   }
 }
+
+// added back functionality to "back to terminal" button
+
+const back = document.body.querySelector(".menu-item--back");
+
+back.addEventListener("click", function () {
+  window.location.href = "index.html";
+});
