@@ -525,17 +525,26 @@ h1 {
 
 .projects-visual {
   background-image: url(http://bit.ly/2gPLxZ4);
-  background-size: cover;
+  background-size: autp 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: scroll;
   position: relative;
   width: 50%;
   height: 99%;
-  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   margin-right: 20px;
   box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.05), 10px 10px 30px rgba(0, 0, 0, 0.808);
+}
+
+.projects-visual--image {
+  object-fit: cover;
+  position: relative;
+  height: inherit;
+  width: inherit;
 }
 
 .projects-visual--find-here {
@@ -614,19 +623,14 @@ h1 {
     height: 55%;
     margin-bottom: 20px;
     margin-right: 0;
-    border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    box-shadow: none;
   }
 }
 
 @media (max-width: 450px) {
   .projects-text {
     padding: 20px 30px;
-  }
-  .projects-visual {
-    width: 80%;
   }
 }
 
