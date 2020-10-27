@@ -7,6 +7,7 @@
 @import "components/loader";
 @import "components/projects";
 @import "components/menu";
+@import "components/projects-info";
 
 @import "utilities/remove-blue-highlight";
 
@@ -23,7 +24,7 @@ body {
   background-color: #171717;
   justify-content: space-around;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
   overflow-y: auto;
   background-repeat: no-repeat;
 
@@ -84,10 +85,3 @@ a {
     }
   }
 }
-
-// @media (max-width: 768px) {
-//   body,
-//   html {
-//     width: 98vw;
-//   }
-// }
