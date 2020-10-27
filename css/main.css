@@ -523,6 +523,38 @@ h1 {
   color: white;
 }
 
+.projects-text--buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 30px;
+}
+
+.projects-text--buttons_item {
+  background-color: black;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  vertical-align: middle;
+  border-radius: 10px;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.808);
+}
+
+.projects-text--buttons_item .bx {
+  font-size: 24px;
+  color: inherit;
+  padding-right: 10px;
+}
+
+.projects-text--buttons_item:not(:last-child) {
+  margin-right: 20px;
+}
+
 .projects-visual {
   position: relative;
   width: 50%;
@@ -536,35 +568,10 @@ h1 {
 
 .projects-visual--image {
   object-fit: cover;
-  height: 90%;
+  height: 100%;
   width: 100%;
   border-radius: 20px;
   box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.05), 10px 10px 30px rgba(0, 0, 0, 0.808);
-}
-
-.projects-visual--find-here {
-  background-color: black;
-  border: none;
-  padding: 10px;
-  bottom: 20px;
-  color: white;
-  font-family: "Source Code Pro", monospace;
-  line-height: 23px;
-  transition: all 0.3s ease-in-out;
-  vertical-align: middle;
-  border-radius: 10px;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.808);
-}
-
-.projects-visual--find-here .bx {
-  font-size: 24px;
-  color: inherit;
-  padding-right: 10px;
 }
 
 @media (min-height: 1200px) {
@@ -587,10 +594,9 @@ h1 {
 
 @media (max-width: 768px) {
   .projects {
-    width: 100vw;
-    height: auto;
+    width: 100%;
     display: block;
-    padding: 0 20px;
+    padding: 0;
     overflow-y: visible;
     position: relative;
   }
@@ -604,12 +610,9 @@ h1 {
   .projects-visual {
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    height: 60%;
-    margin-bottom: 20px;
-    margin-right: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    width: 80%;
+    height: auto;
+    margin: 60px 0 20px;
   }
 }
 
@@ -661,7 +664,7 @@ h1 {
 
 .menu-item--back {
   position: absolute;
-  left: 40px;
+  left: 50px;
   top: 50px;
   color: rgba(255, 255, 255, 0.377);
   font-family: "Source Code Pro", monospace;
