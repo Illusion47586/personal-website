@@ -5,6 +5,8 @@
 @import "components/code-box";
 @import "components/social-icons";
 @import "components/loader";
+@import "components/projects";
+@import "components/menu";
 
 @import "utilities/remove-blue-highlight";
 
@@ -22,6 +24,7 @@ body {
   justify-content: space-around;
   color: white;
   overflow: hidden;
+  overflow-y: auto;
   background-repeat: no-repeat;
 
   &::-webkit-scrollbar {

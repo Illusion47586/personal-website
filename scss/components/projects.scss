@@ -1,0 +1,210 @@
+.projects {
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-text {
+    width: 50%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 1em;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: black;
+      border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background-color: black;
+      border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient($first-color, $second-color);
+      border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      visibility: hidden;
+    }
+
+    &--heading {
+      font-family: "Playfair Display", serif;
+      font-size: 4em;
+      font-weight: 400;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      & .bx {
+        font-size: 2rem;
+        margin-left: 20px;
+
+        color: rgba(255, 255, 255, 0.377);
+        cursor: pointer;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    &--content {
+      font-family: "Source Code Pro", monospace;
+      // line-height: 23px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.7em;
+      letter-spacing: 0.03rem;
+      color: rgba(255, 255, 255, 0.788);
+    }
+
+    &--sub_heading {
+      font-family: "Playfair Display", serif;
+      font-size: 2em;
+      font-weight: 400;
+      padding-bottom: 10px;
+    }
+
+    &--highlight {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: 0.04rem;
+      color: white;
+    }
+  }
+
+  &-visual {
+    // background: $main-gradient;
+    // // background-color: white;
+    background-image: url(http://bit.ly/2gPLxZ4);
+    background-size: cover;
+    position: relative;
+    width: 50%;
+    height: 99%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.05),
+      10px 10px 30px rgba(0, 0, 0, 0.808);
+
+    &--find-here {
+      background-color: black;
+      padding: 10px;
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.377);
+      font-family: "Source Code Pro", monospace;
+      line-height: 23px;
+      border: solid 1px rgba(255, 255, 255, 0.377);
+      transition: all 0.3s ease-in-out;
+      opacity: 0.5;
+      vertical-align: middle;
+      border-radius: 10px;
+      z-index: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      & .bx {
+        font-size: 24px;
+        color: inherit;
+        padding-right: 10px;
+      }
+
+      &:hover {
+        color: white;
+        border: solid 1px transparent;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (min-height: 1200px) {
+  .projects {
+    align-items: flex-start;
+    &-visual {
+      height: 900px;
+    }
+  }
+}
+
+@media (max-width: 1190px) {
+  .projects {
+    &-text {
+      &::-webkit-scrollbar {
+        width: 0.7em;
+      }
+
+      &--heading {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    width: 100vw;
+    height: auto;
+    display: block;
+    padding: 0 20px;
+    overflow-y: visible;
+    position: relative;
+
+    &-text {
+      margin: 0;
+      margin-bottom: 10px;
+      padding: 20px 60px;
+      width: initial;
+      height: auto;
+    }
+
+    &-visual {
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      // background-color: rebeccapurple;
+      width: 90%;
+      height: 55%;
+      margin-bottom: 20px;
+      margin-right: 0;
+      border-radius: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .projects {
+    &-text {
+      padding: 20px 30px;
+    }
+
+    &-visual {
+      width: 80%;
+    }
+  }
+}

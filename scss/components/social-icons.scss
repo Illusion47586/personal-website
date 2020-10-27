@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.4s;
+    cursor: pointer;
 
     &:hover {
       transform: translateY(-5px);
@@ -23,7 +24,7 @@
   }
 }
 
-@media (max-width: 910px) {
+@media (max-width: 580px) {
   .social-icons {
     grid-template-columns: repeat(4, auto);
   }
