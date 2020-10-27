@@ -823,25 +823,21 @@ a {
 @media (max-width: 910px) {
   body,
   html {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   body::-webkit-scrollbar,
   html::-webkit-scrollbar {
-    visibility: hidden;
-    display: none;
-    width: 0;
+    width: 0.5em;
   }
   body::-webkit-scrollbar-track,
   html::-webkit-scrollbar-track {
-    visibility: hidden;
-    display: none;
     background-color: transparent;
+    border-radius: 100px;
   }
   body::-webkit-scrollbar-track-piece,
   html::-webkit-scrollbar-track-piece {
-    visibility: hidden;
-    display: none;
     background-color: transparent;
+    border-radius: 100px;
   }
 }
 /*# sourceMappingURL=main.css.map */
