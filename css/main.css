@@ -576,6 +576,12 @@ h1 {
   width: 100%;
   border-radius: 20px;
   box-shadow: -10px -10px 30px rgba(255, 255, 255, 0.05), 10px 10px 30px rgba(0, 0, 0, 0.808);
+  transition: all 0.3s ease-in-out;
+}
+
+.projects-visual--image:hover {
+  transform: scale(0.98);
+  box-shadow: none;
 }
 
 @media (min-height: 1200px) {
