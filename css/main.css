@@ -557,6 +557,9 @@ h1 {
 
 .projects-visual {
   background-image: url(../assets/ld/ld.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: relative;
   width: 50%;
   height: 100%;
