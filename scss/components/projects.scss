@@ -1,4 +1,13 @@
-.projects {
+.projects{
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
   width: calc(100% - 80px);
   height: calc(100% - 80px);
   display: flex;
@@ -146,6 +155,7 @@
 
       &:hover {
         transform: scale(0.98);
+        border-radius: 15px;
         box-shadow: none;
       }
     }
@@ -153,7 +163,7 @@
 }
 
 @media (min-height: 1200px) {
-  .projects {
+  .project {
     align-items: flex-start;
     &-visual {
       height: 900px;
@@ -162,7 +172,7 @@
 }
 
 @media (max-width: 1190px) {
-  .projects {
+  .project {
     &-text {
       &::-webkit-scrollbar {
         width: 0.7em;
@@ -176,7 +186,7 @@
 }
 
 @media (max-width: 768px) {
-  .projects {
+  .project {
     width: 100%;
     display: block;
     padding: 0;
@@ -202,7 +212,7 @@
 }
 
 @media (max-width: 450px) {
-  .projects {
+  .project {
     &-text {
       padding: 20px 30px;
     }
