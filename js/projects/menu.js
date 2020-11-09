@@ -1,37 +1,56 @@
 let root = document.documentElement;
 i = 0;
-// todo: change this with length of array with project details
-const finalLength = 5;
+
+const projects = ["bookworm", "b"];
+
+const finalLength = projects.length;
 
 const leftButton = document.querySelector(".menu-item--left");
 const rightButton = document.querySelector(".menu-item--right");
 
 function moveRight() {
   if (rightButton.getAttribute("data-active") == "true") {
-    if (i == 0) {
-      leftButton.setAttribute("data-active", "true");
-      root.style.setProperty("--animation-player", "none");
-    }
-    if (i == finalLength - 1) {
-      rightButton.setAttribute("data-active", "false");
-    } else {
-      rightButton.setAttribute("data-active", "true");
-    }
     i++;
+    endPoints();
   }
 }
 
 function moveLeft() {
   if (leftButton.getAttribute("data-active") == "true") {
     i--;
-    if (i == finalLength) {
-      rightButton.setAttribute("data-active", "false");
-    } else {
-      rightButton.setAttribute("data-active", "true");
-    }
-    if (i == 0) {
-      leftButton.setAttribute("data-active", "false");
-      root.style.setProperty("--animation-player", "none");
+    endPoints();
+  }
+}
+
+function endPoints() {
+  root.style.setProperty("--animation-player", "none");
+  if (i == 0) {
+    leftButton.setAttribute("data-active", "false");
+    rightButton.setAttribute("data-active", "true");
+  } else if (i == finalLength - 1) {
+    leftButton.setAttribute("data-active", "true");
+    rightButton.setAttribute("data-active", "false");
+  }
+  chooseProject(i);
+  console.log(i);
+}
+
+function chooseProject(i) {
+  for (let index = 0; index < projects.length; index++) {
+    const element = projects[index];
+    document.body
+      .querySelector("#" + element)
+      .setAttribute("style", "display: none");
+    if (index == i) {
+      document.body
+        .querySelector("#" + element)
+        .setAttribute("style", "display: flex");
+
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.body
+          .querySelector("#" + element)
+          .setAttribute("style", "display: block");
+      }
     }
   }
 }

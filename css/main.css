@@ -440,6 +440,7 @@ h1 {
   position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -450,6 +451,10 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.project:not(:first-child) {
+  display: none;
 }
 
 .project-text {
@@ -844,8 +849,8 @@ h1 {
 html,
 body {
   box-sizing: border-box;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
