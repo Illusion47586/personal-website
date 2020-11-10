@@ -42,14 +42,14 @@ function chooseProject(i) {
       .querySelector("#" + element)
       .setAttribute("style", "display: none");
     if (index == i) {
-      document.body
-        .querySelector("#" + element)
-        .setAttribute("style", "display: flex");
-
       if (window.matchMedia("(max-width: 768px)").matches) {
         document.body
           .querySelector("#" + element)
           .setAttribute("style", "display: block");
+      } else {
+        document.body
+          .querySelector("#" + element)
+          .setAttribute("style", "display: flex");
       }
     }
   }
