@@ -71,6 +71,10 @@ const qna = {
     "List of commands:" +
     br +
     "# " +
+    yellow("about me") +
+    " to know about me in brief." +
+    br +
+    "# " +
     yellow("show skills") +
     " to know about my skills and technologies I am confortable with." +
     br +
@@ -80,15 +84,27 @@ const qna = {
     br +
     "# " +
     yellow("show education") +
+    " or " +
+    yellow("show edu") +
     " to know about my previous and ongoing education." +
     br +
     "# " +
     yellow("show experience") +
+    " or " +
+    yellow("show exp") +
     " to know about my work experience." +
     br +
     "# " +
     yellow("show achievements") +
+    " or " +
+    yellow("show ach") +
     " to know about my achievements." +
+    br +
+    "# " +
+    yellow("show certifications") +
+    " or " +
+    yellow("show certi") +
+    " to see my certifications in various courses." +
     br +
     "# " +
     yellow("download resume") +
@@ -128,37 +144,82 @@ const qna = {
       br +
       "1. can work with (no need to learn, already know): " +
       green(
-        "HTML, CSS, JAVASCRIPT, REACT JS, NODE JS, DART(FLUTTER), TENSORFLOW, PYTHON, DSA, C++, PANDA"
+        "HTML, CSS, JAVASCRIPT, NODE JS*, DART(FLUTTER), PYTHON, DSA, C++, Data Analysis*, Machine Learning*"
       ) +
       br +
-      "2. can work with (after learning): " +
+      "2. am enthusiastic about: " +
+      green("devops, electric vehicles(the software part), cloud.") +
+      br +
+      "3. can work with (after learning): " +
       green(
-        "pretty much anything, I am willing to learn anything that helps me grow and contribute more to the organisation I am part of😄."
+        "pretty much anything, I am more than willing to learn anything that helps me grow and contribute more to the organisation I am part of😄."
       ) +
       br +
       br +
-      // ! Fucking remove this before releasing
-      "THIS IS NOT TO BE TAKEN SERIOUSLY DUH.", // as of now
-    achievements: "None, as of now. sigh.",
-    projects: function () {
-      window.location.href = "projects.html";
-    },
-    experience:
-      "Recently worked as a graphic design intern at " +
-      a("@wildly.in", "https://www.instagram.com/wildly.in/") +
-      "!",
+      green("*: ") +
+      "currently learning.", // as of now
+    achievements: "Among top " + green("1.5%") + " in JEE MAINS 2019.",
+    ach: "Among top " + green("1.5%") + " in JEE MAINS 2019.",
+    // projects: function () {
+    //   window.location.href = "projects.html";
+    // },
+    projects:
+      green("BookMark") +
+      " and " +
+      green("Alert") +
+      " apps among others, more details would be uploaded soon...",
+    experience: "Currently a graphic designer at " + green("IEEE NSUT") + ".",
+    exp: "Currently a graphic designer at " + green("IEEE NSUT") + ".",
     education:
-      "Currently pursueing B.Tech in Information Technology from NSUT(formerly NSIT), Delhi.",
+      "- Currently pursueing " +
+      green("B.Tech in Information Technology") +
+      " from NSUT(formerly NSIT), Delhi. (Batch of 2023)" +
+      br +
+      "- Class 12 passout from Modern Era Convent, New Delhi. (Batch of 2019)",
+    edu:
+      "- Currently pursueing " +
+      green("B.Tech in Information Technology") +
+      " from NSUT(formerly NSIT), Delhi. (Batch of 2023)" +
+      br +
+      "- Class 12 passout from Modern Era Convent, New Delhi. (Batch of 2019)",
+    certifications:
+      "1. " +
+      a(
+        "The Complete 2020 Flutter Development Bootcamp with Dart",
+        "https://www.udemy.com/certificate/UC-6df06677-f3ad-4510-9844-89328deb6b65/"
+      ),
+    certi:
+      "1. " +
+      a(
+        "The Complete 2020 Flutter Development Bootcamp with Dart",
+        "https://www.udemy.com/certificate/UC-6df06677-f3ad-4510-9844-89328deb6b65/"
+      ),
   },
 
   download: {
-    resume: function () {
-      // todo: change with this link with resume.pdf
-      download_file(
-        "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf",
-        "something"
-      );
-    },
+    // resume: function () {
+    //   // todo: change with this link with resume.pdf
+    //   download_file(
+    //     "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf",
+    //     "something"
+    //   );
+    // },
+    resume:
+      "Kinda empty right now..." +
+      br +
+      green("Wanna help?") +
+      " I am currently open to new intern opportunities as a flutter developer intern(app development), or web dev or data science intern in a place where I can learn and grow and help." +
+      br +
+      br +
+      "Contact me using links given below 👇.",
+  },
+  about: {
+    me:
+      "Glad you are here!" +
+      br +
+      "I am Dhruv Tiwari, currently pursuing B.Tech in IT from NSIT(formerly NSUT), New Delhi, India. I am a hardworking and enthusiastic person. I believe in teamwork. I am into design and development, this website has been designed and developed by me (well, all my projects have been designed and developed by me)." +
+      br +
+      "Have an interesting project? Let's chat! Contact me using given links at the bottom of this page 👇.",
   },
 };
 

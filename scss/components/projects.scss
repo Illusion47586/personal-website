@@ -147,6 +147,7 @@
     justify-content: space-between;
     align-items: center;
     margin-right: 40px;
+    transition: all 0.3s ease-in-out;
 
     &--image {
       object-fit: cover;
@@ -162,8 +163,36 @@
         transform: scale(0.98);
         border-radius: 15px;
         box-shadow: none;
+
+        & .effect-1,
+        & .effect-2 {
+          display: black;
+        }
       }
     }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    top: 0;
+    left: 2%;
+  }
+  25% {
+    top: 2%;
+    left: 0%;
+  }
+  50% {
+    top: 4%;
+    left: 2%;
+  }
+  75% {
+    top: 2%;
+    left: 4%;
+  }
+  100% {
+    top: 0;
+    left: 2%;
   }
 }
 

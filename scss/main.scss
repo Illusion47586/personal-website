@@ -8,6 +8,8 @@
 @import "components/projects";
 @import "components/menu";
 @import "components/projects-info";
+@import "components/catCard";
+@import "components/projectTile";
 
 @import "utilities/remove-blue-highlight";
 
@@ -22,6 +24,9 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #171717;
+  // background-color: black;
+  // background-image: url("../assets/wp2.jpg");
+  // background-size: cover;
   justify-content: space-around;
   color: white;
   overflow-x: hidden;
@@ -54,6 +59,12 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
+  &:hover,
+  &:visited {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 * {
@@ -84,5 +95,24 @@ a {
       background-color: transparent;
       border-radius: 100px;
     }
+  }
+}
+
+.test {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+
+  &-child {
+    transform: translateZ(40px);
+    height: 100px;
+    width: 100px;
+    background-color: white;
   }
 }
