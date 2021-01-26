@@ -9,16 +9,6 @@ function a(text, link) {
   );
 }
 
-function previewText(text, pathToImage) {
-  return (
-    '<span class = "hoverable green noSelect" data-image = "' +
-    pathToImage +
-    '" onmouseover="hoverData(this)" onmousedown="clickAction(this)" onmouseout="removeData(this)">' +
-    text +
-    "</span>"
-  );
-}
-
 function yellow(text) {
   return '<span class = "yellow">' + text + "</span>";
 }
