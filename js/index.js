@@ -102,32 +102,6 @@ const qna = {
     br +
     br +
     "Also you can contact me from any of the below links👇",
-  test:
-    "Testing stuff:" +
-    br +
-    "# " +
-    a("this is a link") +
-    br +
-    "# " +
-    yellow("yellow text") +
-    br +
-    "# " +
-    green("green text normal") +
-    br +
-    "# " +
-    previewText(
-      "green text with hover preview(works only on pc)",
-      "https://unsplash.it/1080/1080"
-    ) +
-    br +
-    br +
-    "Also none of the below links work👇",
-  test2: function () {
-    console.log("yo");
-  },
-  test3: {
-    ok: "yoyoyo",
-  },
   show: {
     skills:
       "Here are the skills/technologies I:" +
@@ -207,7 +181,9 @@ const qna = {
     me:
       "Glad you are here!" +
       br +
-      "I am Dhruv Tiwari, currently pursuing B.Tech in IT from NSIT(formerly NSUT), New Delhi, India. I am a hardworking and enthusiastic person. I believe in teamwork. I am into design and development, this website has been designed and developed by me (well, all my projects have been designed and developed by me)." +
+      "I am Dhruv Tiwari, currently pursuing B.Tech in IT from NSIT(formerly NSUT), New Delhi, India. I am a hardworking and enthusiastic person. I believe in teamwork. I am into " +
+      green("design and development (web and app)") +
+      ", this website has been designed and developed by me (well, all my projects have been designed and developed by me😅)." +
       br +
       "Have an interesting project? Let's chat! Contact me using given links at the bottom of this page 👇.",
   },
