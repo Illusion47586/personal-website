@@ -162,7 +162,7 @@ const qna = {
     resume: function () {
       // todo: change with this link with resume.pdf
       download_file(
-        "https://drive.google.com/file/d/1WKqAkzZI6GseN-H4hQg2UfOtfXQ63dmw/view?usp=sharing",
+        "https://drive.google.com/file/d/1w_zygGjQRpRFkW_M1WYgdchwymeseEG2/view?usp=sharing",
         "Dhruv-Tiwari_resume"
       );
     },
