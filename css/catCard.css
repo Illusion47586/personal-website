@@ -1,0 +1,65 @@
+.project-category__card {
+  padding: 20px;
+  width: 400px;
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.project-category__card--link {
+  font-size: 30px;
+  position: absolute;
+  right: -10px;
+  top: 30px;
+  opacity: 0;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+}
+
+.project-category__card--link i {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 5px 5px 10px black;
+}
+
+.project-category__card--image {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.788);
+  margin-bottom: 20px;
+}
+
+.project-category__card--desc {
+  width: 200px;
+}
+
+.project-category__card::after {
+  content: "";
+  height: 90%;
+  width: 90%;
+  opacity: 0.4;
+  background-color: black;
+  border-radius: 20px;
+  position: absolute;
+  bottom: -1em;
+  right: -1em;
+  z-index: -1;
+  contain: strict;
+  transition: all 1s ease-in-out;
+}
+
+.project-category__card:hover .project-category__card--link {
+  right: 30px;
+  opacity: 1;
+}
+
+.project-category__card:hover::after {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+/*# sourceMappingURL=catCard.css.map */

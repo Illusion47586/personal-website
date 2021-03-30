@@ -64,25 +64,27 @@
 
       .hoverable {
         position: relative;
-        .hoverData {
-          position: absolute;
-          top: -100%;
-          left: 110%;
-          height: 200px;
-          width: 200px;
-          object-fit: cover;
-          background: url("../assets/ld/ld.gif"), $main-gradient;
-          background-position: center;
-          background-size: contain;
-          padding: 10px;
-          border-radius: 10px;
-          box-shadow: $item-shadow;
+      }
 
-          animation-name: expandHoverData;
-          animation-iteration-count: 1;
-          animation-duration: 0.4s;
-          animation-timing-function: $curve;
-        }
+      .hoverData {
+        position: absolute;
+        // top: -100%;
+        // left: 110%;
+        height: 10rem;
+        width: 10rem;
+        object-fit: cover;
+        background: url("../assets/ld/ld.gif"), $main-gradient;
+        background-position: center;
+        background-size: contain;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: $item-shadow;
+
+        animation-name: expandHoverData;
+        animation-iteration-count: 1;
+        animation-duration: 0.4s;
+        animation-timing-function: $curve;
       }
 
       a {
@@ -207,26 +209,26 @@
 
 @keyframes expandHoverData {
   0% {
-    height: 0;
+    height: 10rem;
     width: 0;
   }
 
   100% {
-    height: 200px;
-    width: 200px;
+    height: 10rem;
+    width: 10rem;
   }
 }
 
 @keyframes collapseHoverData {
   0% {
-    height: 200px;
-    width: 200px;
+    height: 10rem;
+    width: 10rem;
     opacity: 1;
   }
 
   100% {
     width: 0;
-    height: 0;
+    height: 10rem;
     opacity: 0;
   }
 }

@@ -3,19 +3,9 @@ function a(text, link) {
   return (
     '<a class = "noselect" href = "' +
     link +
-    '">' +
+    '"target="_blank" >' +
     text +
     '<i class="bx bx-link-external"></i></a>'
-  );
-}
-
-function previewText(text, pathToImage) {
-  return (
-    '<span class = "hoverable green noSelect" data-image = "' +
-    pathToImage +
-    '" onmouseover="hoverData(this)" onmousedown="clickAction(this)" onmouseout="removeData(this)">' +
-    text +
-    "</span>"
   );
 }
 
@@ -71,6 +61,10 @@ const qna = {
     "List of commands:" +
     br +
     "# " +
+    yellow("about me") +
+    " to know about me in brief." +
+    br +
+    "# " +
     yellow("show skills") +
     " to know about my skills and technologies I am confortable with." +
     br +
@@ -80,15 +74,27 @@ const qna = {
     br +
     "# " +
     yellow("show education") +
+    " or " +
+    yellow("show edu") +
     " to know about my previous and ongoing education." +
     br +
     "# " +
     yellow("show experience") +
+    " or " +
+    yellow("show exp") +
     " to know about my work experience." +
     br +
     "# " +
     yellow("show achievements") +
+    " or " +
+    yellow("show ach") +
     " to know about my achievements." +
+    br +
+    "# " +
+    yellow("show certifications") +
+    " or " +
+    yellow("show certi") +
+    " to see my certifications in various courses." +
     br +
     "# " +
     yellow("download resume") +
@@ -96,69 +102,94 @@ const qna = {
     br +
     br +
     "Also you can contact me from any of the below links👇",
-  test:
-    "Testing stuff:" +
-    br +
-    "# " +
-    a("this is a link") +
-    br +
-    "# " +
-    yellow("yellow text") +
-    br +
-    "# " +
-    green("green text normal") +
-    br +
-    "# " +
-    previewText(
-      "green text with hover preview(works only on pc)",
-      "https://unsplash.it/1080/1080"
-    ) +
-    br +
-    br +
-    "Also none of the below links work👇",
-  test2: function () {
-    console.log("yo");
-  },
-  test3: {
-    ok: "yoyoyo",
-  },
   show: {
     skills:
       "Here are the skills/technologies I:" +
       br +
       "1. can work with (no need to learn, already know): " +
       green(
-        "HTML, CSS, JAVASCRIPT, REACT JS, NODE JS, DART(FLUTTER), TENSORFLOW, PYTHON, DSA, C++, PANDA"
+        "HTML, CSS, JAVASCRIPT, NODE JS*, DART(FLUTTER), PYTHON, DSA, C++"
       ) +
       br +
-      "2. can work with (after learning): " +
+      "2. am enthusiastic about: " +
+      green("devops, electric vehicles(the software part), cloud.") +
+      br +
+      "3. can work with (after learning): " +
       green(
-        "pretty much anything, I am willing to learn anything that helps me grow and contribute more to the organisation I am part of😄."
-      ) +
+        "pretty much anything, I am more than willing to learn anything that helps me grow and contribute more to the organisation I am part of😄."
+      ), // as of now
+    achievements: "Among top " + green("1.5%") + " in JEE MAINS 2019.",
+    ach: "Among top " + green("1.5%") + " in JEE MAINS 2019.",
+    // projects: function () {
+    //   window.location.href = "projects.html";
+    // },
+    projects:
+      green("BookMark") +
+      " and " +
+      green("Alert") +
+      " apps among others, more details would be uploaded soon..." +
       br +
-      br +
-      // ! Fucking remove this before releasing
-      "THIS IS NOT TO BE TAKEN SERIOUSLY DUH.", // as of now
-    achievements: "None, as of now. sigh.",
-    projects: function () {
-      window.location.href = "projects.html";
-    },
+      "This website is still under construction 🚧.",
     experience:
-      "Recently worked as a graphic design intern at " +
-      a("@wildly.in", "https://www.instagram.com/wildly.in/") +
-      "!",
+      "Graphic designer at " +
+      green("IEEE NSUT") +
+      " from Oct 2019 to Dec 2020.",
+    exp:
+      "Graphic designer at " +
+      green("IEEE NSUT") +
+      " from Oct 2019 to Dec 2020.",
     education:
-      "Currently pursueing B.Tech in Information Technology from NSUT(formerly NSIT), Delhi.",
+      "- Currently pursueing " +
+      green("B.Tech in Information Technology") +
+      " from NSUT(formerly NSIT), Delhi. (Batch of 2023)" +
+      br +
+      "- Class 12 passout from Modern Era Convent, New Delhi. (Batch of 2019)",
+    edu:
+      "- Currently pursueing " +
+      green("B.Tech in Information Technology") +
+      " from NSUT(formerly NSIT), Delhi. (Batch of 2023)" +
+      br +
+      "- Class 12 passout from Modern Era Convent, New Delhi. (Batch of 2019)",
+    certifications:
+      "1. " +
+      a(
+        "The Complete 2020 Flutter Development Bootcamp with Dart",
+        "https://www.udemy.com/certificate/UC-6df06677-f3ad-4510-9844-89328deb6b65/"
+      ),
+    certi:
+      "1. " +
+      a(
+        "The Complete 2020 Flutter Development Bootcamp with Dart",
+        "https://www.udemy.com/certificate/UC-6df06677-f3ad-4510-9844-89328deb6b65/"
+      ),
   },
 
   download: {
     resume: function () {
       // todo: change with this link with resume.pdf
       download_file(
-        "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf",
-        "something"
+        "https://drive.google.com/file/d/1w_zygGjQRpRFkW_M1WYgdchwymeseEG2/view?usp=sharing",
+        "Dhruv-Tiwari_resume"
       );
     },
+    // resume:
+    //   "Kinda empty right now..." +
+    //   br +
+    //   green("Wanna help?") +
+    //   " I am currently open to new intern opportunities as a flutter developer intern(app development), or web dev or data science intern in a place where I can learn and grow and help." +
+    //   br +
+    //   br +
+    //   "Contact me using links given below 👇.",
+  },
+  about: {
+    me:
+      "Glad you are here!" +
+      br +
+      "I am Dhruv Tiwari, currently pursuing B.Tech in IT from NSUT(formerly NSIT), New Delhi, India. I am a hardworking and enthusiastic person. I believe in teamwork. I am into " +
+      green("design and development (web and app)") +
+      ", this website has been designed and developed by me (well, all my projects have been designed and developed by me😅)." +
+      br +
+      "Have an interesting project? Let's chat! Contact me using given links at the bottom of this page 👇.",
   },
 };
 
