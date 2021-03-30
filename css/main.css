@@ -301,7 +301,7 @@ h1 {
   animation: opacity cubic-bezier(0.87, 0.02, 0.49, 1.6) 0.7s;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(7, auto);
+  grid-template-columns: repeat(8, auto);
 }
 
 .social-icons-items {
