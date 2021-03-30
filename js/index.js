@@ -129,9 +129,15 @@ const qna = {
       green("Alert") +
       " apps among others, more details would be uploaded soon..." +
       br +
-      "This website is still under construction🚧.",
-    experience: "Currently a graphic designer at " + green("IEEE NSUT") + ".",
-    exp: "Currently a graphic designer at " + green("IEEE NSUT") + ".",
+      "This website is still under construction 🚧.",
+    experience:
+      "Graphic designer at " +
+      green("IEEE NSUT") +
+      " from Oct 2019 to Dec 2020.",
+    exp:
+      "Graphic designer at " +
+      green("IEEE NSUT") +
+      " from Oct 2019 to Dec 2020.",
     education:
       "- Currently pursueing " +
       green("B.Tech in Information Technology") +
@@ -179,7 +185,7 @@ const qna = {
     me:
       "Glad you are here!" +
       br +
-      "I am Dhruv Tiwari, currently pursuing B.Tech in IT from NSIT(formerly NSUT), New Delhi, India. I am a hardworking and enthusiastic person. I believe in teamwork. I am into " +
+      "I am Dhruv Tiwari, currently pursuing B.Tech in IT from NSUT(formerly NSIT), New Delhi, India. I am a hardworking and enthusiastic person. I believe in teamwork. I am into " +
       green("design and development (web and app)") +
       ", this website has been designed and developed by me (well, all my projects have been designed and developed by me😅)." +
       br +
