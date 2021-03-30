@@ -528,4 +528,11 @@ a:hover, a:visited {
     border-radius: 100px;
   }
 }
+
+button,
+button:active,
+button:visited,
+button:focus {
+  outline: none;
+}
 /*# sourceMappingURL=main.css.map */

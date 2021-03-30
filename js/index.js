@@ -3,7 +3,7 @@ function a(text, link) {
   return (
     '<a class = "noselect" href = "' +
     link +
-    '">' +
+    '"target="_blank" >' +
     text +
     '<i class="bx bx-link-external"></i></a>'
   );
@@ -108,7 +108,7 @@ const qna = {
       br +
       "1. can work with (no need to learn, already know): " +
       green(
-        "HTML, CSS, JAVASCRIPT, NODE JS*, DART(FLUTTER), PYTHON, DSA, C++, Data Analysis*, Machine Learning*"
+        "HTML, CSS, JAVASCRIPT, NODE JS*, DART(FLUTTER), PYTHON, DSA, C++"
       ) +
       br +
       "2. am enthusiastic about: " +
@@ -117,11 +117,7 @@ const qna = {
       "3. can work with (after learning): " +
       green(
         "pretty much anything, I am more than willing to learn anything that helps me grow and contribute more to the organisation I am part of😄."
-      ) +
-      br +
-      br +
-      green("*: ") +
-      "currently learning.", // as of now
+      ), // as of now
     achievements: "Among top " + green("1.5%") + " in JEE MAINS 2019.",
     ach: "Among top " + green("1.5%") + " in JEE MAINS 2019.",
     // projects: function () {
@@ -131,7 +127,9 @@ const qna = {
       green("BookMark") +
       " and " +
       green("Alert") +
-      " apps among others, more details would be uploaded soon...",
+      " apps among others, more details would be uploaded soon..." +
+      br +
+      "This website is still under construction🚧.",
     experience: "Currently a graphic designer at " + green("IEEE NSUT") + ".",
     exp: "Currently a graphic designer at " + green("IEEE NSUT") + ".",
     education:
@@ -161,21 +159,21 @@ const qna = {
   },
 
   download: {
-    // resume: function () {
-    //   // todo: change with this link with resume.pdf
-    //   download_file(
-    //     "https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf",
-    //     "something"
-    //   );
-    // },
-    resume:
-      "Kinda empty right now..." +
-      br +
-      green("Wanna help?") +
-      " I am currently open to new intern opportunities as a flutter developer intern(app development), or web dev or data science intern in a place where I can learn and grow and help." +
-      br +
-      br +
-      "Contact me using links given below 👇.",
+    resume: function () {
+      // todo: change with this link with resume.pdf
+      download_file(
+        "https://drive.google.com/file/d/1lhTw59ETO79cevJ49niU8vDpInFpwOL4/view?usp=sharing",
+        "Dhruv-Tiwari_resume"
+      );
+    },
+    // resume:
+    //   "Kinda empty right now..." +
+    //   br +
+    //   green("Wanna help?") +
+    //   " I am currently open to new intern opportunities as a flutter developer intern(app development), or web dev or data science intern in a place where I can learn and grow and help." +
+    //   br +
+    //   br +
+    //   "Contact me using links given below 👇.",
   },
   about: {
     me:

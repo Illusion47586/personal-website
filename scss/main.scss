@@ -89,3 +89,10 @@ a {
     }
   }
 }
+
+button,
+button:active,
+button:visited,
+button:focus {
+  outline: none;
+}
